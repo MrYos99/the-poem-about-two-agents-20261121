@@ -3,6 +3,11 @@
 // agents when they agree on one plan, to /output/entry.txt. Outside the
 // grader's container, MAKEFUN_OUTPUT_DIR stands in for /output:
 //   mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
+//
+// Output contract (sealed scorer, RULES.txt): entry.txt must be UTF-8 text of
+// 1 to 280 characters, not only whitespace. This poem is exactly 259 Unicode
+// code points with no trailing newline, so it sits inside the valid window;
+// the string below is verbatim as selected and must never be reworded.
 
 import { writeFileSync } from 'node:fs';
 import { join } from 'node:path';
